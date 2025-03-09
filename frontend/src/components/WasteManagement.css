@@ -1,0 +1,85 @@
+.waste-management-dashboard {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .waste-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .waste-badge.organic { background: #2ecc71; color: white; }
+  .waste-badge.non-organic { background: #e67e22; color: white; }
+  .waste-badge.chemical { background: #e74c3c; color: white; }
+  
+  .waste-entry-form {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .submit-btn {
+    background: #3498db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .waste-entries-table {
+    margin: 2rem 0;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .redistribution-options {
+    margin-top: 2rem;
+  }
+  
+  .options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .option-card {
+    padding: 1rem;
+    border-radius: 8px;
+    color: white;
+  }
+  
+  .option-card.compost { background: #27ae60; }
+  .option-card.biogas { background: #f39c12; }
+  .option-card.recycling { background: #2980b9; }
+  
+  .action-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 0.5rem 1rem;
+    color: white;
+    border-radius: 4px;
+    margin-top: 1rem;
+    cursor: pointer;
+  }

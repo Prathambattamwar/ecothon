@@ -1,0 +1,32 @@
+### Soil Analysis
+POST http://localhost:5000/analyze_soil
+Content-Type: application/json
+
+{
+    "sand": 40,
+    "silt": 35,
+    "clay": 25,
+    "ph": 6.5,
+    "N": 45,
+    "P": 30,
+    "K": 300,
+    "organic_matter": 2.5
+}
+
+### Full Analysis
+POST http://localhost:5000/full_analysis
+Content-Type: application/json
+
+{
+    "sand": 40,
+    "silt": 35,
+    "clay": 25,
+    "ph": 6.5,
+    "N": 45,
+    "P": 30,
+    "K": 300,
+    "organic_matter": 2.5,
+    "monthly_rainfall": [50,60,70,80,90,100,90,80,70,60,50,40],
+    "monthly_temps": [[20,10],[22,12],[25,15],[28,18],[30,20],[32,22],[30,21],[28,19],[25,16],[22,13],[20,11],[18,9]],
+    "frost_days": 2
+}
