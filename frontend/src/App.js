@@ -33,6 +33,7 @@ import Wallet from './components/Wallet';
 import SchemesSection from './components/SchemesSection';
 import FarmersSocial from './components/FarmersSocial';
 import WasteDashboard from './components/WasteDashboard';
+import CropRecommendation from './components/CropRecommendation';
 const App = () => {
   useEffect(() => {
     AOS.init();
@@ -43,30 +44,31 @@ const App = () => {
     <BrowserRouter>
 
       <Header />
-   
-        <Routes>
-          <Route path="/" element={<><Banner /><Home /></>} />
-          <Route path="/home" element={<><Banner /><Home /></>} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/whychooseSection" element={<WhyChooseSection />} />
-          <Route path="/newssection" element={<NewsSection />} />
-          <Route path="/wallet" element={<Wallet/>}/>
-          <Route path="/schemes" element={<SchemesSection/>}/>
-          <Route path="/farmarsocial" element={<FarmersSocial />}/>
-          <Route path="/waste-management" element={<WasteDashboard />} />
-          {/* <Route path="/contact" element={<ContactPage />} /> */}
-          {/* <Route path="/worksection" element={<WorkSection />} /> */}
-          {/* <Route path="/helpsection" element={<HelpSection />} /> */}
-          {/* <Route path="/products" element={<ProductSection />} /> */}
-          {/* <Route path="/genericbox" element={<GenericBox />} /> */}
-          {/* <Route path="/testimonials" element={<Testimonials />} />/ */}
-          {/* <Route path="/blog" element={<Blog />} /> */}
-        </Routes>
-    
+
+      <Routes>
+        <Route path="/" element={<><Banner /><Home /></>} />
+        <Route path="/home" element={<><Banner /><Home /></>} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/whychooseSection" element={<WhyChooseSection />} />
+        <Route path="/newssection" element={<NewsSection />} />
+        <Route path="/wallet" element={<Wallet />} />
+        <Route path="/schemes" element={<SchemesSection />} />
+        <Route path="/farmarsocial" element={<FarmersSocial />} />
+        <Route path="/waste-management" element={<WasteDashboard />} />
+        <Route path="/crop-recommendation" element={<CropRecommendation />} />
+        {/* <Route path="/contact" element={<ContactPage />} /> */}
+        {/* <Route path="/worksection" element={<WorkSection />} /> */}
+        {/* <Route path="/helpsection" element={<HelpSection />} /> */}
+        {/* <Route path="/products" element={<ProductSection />} /> */}
+        {/* <Route path="/genericbox" element={<GenericBox />} /> */}
+        {/* <Route path="/testimonials" element={<Testimonials />} />/ */}
+        {/* <Route path="/blog" element={<Blog />} /> */}
+      </Routes>
+
       <FooterSection />
-  
-  </BrowserRouter>
+
+    </BrowserRouter>
   );
 }
 
