@@ -42,13 +42,13 @@ const WasteDashboard = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!newEntry.quantity || !newEntry.location) return;
-    
+
     setWasteEntries([...wasteEntries, {
       ...newEntry,
       id: Date.now(),
       timestamp: new Date().toLocaleString()
     }]);
-    
+
     setNewEntry({ type: 'organic', quantity: '', location: '' });
   };
 
