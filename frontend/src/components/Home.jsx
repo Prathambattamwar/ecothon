@@ -73,10 +73,10 @@ const Home = () => {
     <>
       {/* <Header /> */}
       <CropRecommendation />
-      <NewsSection />
       <SchemesSection />
-      <FarmersSocial />
       <WasteDashboard />
+      <NewsSection />
+      <FarmersSocial />
       <ProductSection />
       <section className="w-100 float-left service-con position-relative plant-img">
         <div className="container position-relative">
