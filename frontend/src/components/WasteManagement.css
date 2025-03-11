@@ -110,10 +110,11 @@ td {
   padding: 1rem;
   text-align: left;
   border-bottom: 1px solid var(--border);
+
 }
 
 th {
-  background: var(--background);
+  background: var(--background--color);
   color: var(--green-color);
   font-weight: 600;
 }
@@ -130,7 +131,7 @@ tr:hover {
 }
 
 .recycling-option {
-  background: var(--background);
+  background: var(--light-green-color);
   border: 1px solid var(--border);
   padding: 0.5rem 1rem;
   border-radius: 1rem;

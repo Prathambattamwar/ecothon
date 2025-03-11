@@ -1,12 +1,15 @@
 // components/WasteManagement/WasteDashboard.jsx
 import React, { useState } from 'react';
 import './WasteManagement.css';
+import { useNavigate } from 'react-router-dom';
+
 // Sub-components
 const WasteTypeBadge = ({ type }) => (
   <span className={`waste-badge ${type}`}>
     {type.charAt(0).toUpperCase() + type.slice(1)}
   </span>
 );
+
 
 const RecyclingOptions = ({ wasteType }) => {
   const options = {
@@ -28,6 +31,11 @@ const RecyclingOptions = ({ wasteType }) => {
 
 // Main Component
 const WasteDashboard = () => {
+  const navigate = useNavigate();
+
+  const handleSchedulePickup = () => {
+    navigate('/schedule-pickup');
+  };
   const [wasteEntries, setWasteEntries] = useState([
     { id: 1, type: 'organic', quantity: '200 kg', location: 'Field A' },
     { id: 2, type: 'non-organic', quantity: '50 kg', location: 'Storage Unit' },
@@ -128,7 +136,7 @@ const WasteDashboard = () => {
           <div className="option-card compost">
             <h4>Compost Conversion</h4>
             <p>Transform organic waste into nutrient-rich compost</p>
-            <button className="action-btn">Schedule Pickup</button>
+            <button className="action-btn" onClick={handleSchedulePickup}>Schedule Pickup</button>
           </div>
 
           <div className="option-card biogas">

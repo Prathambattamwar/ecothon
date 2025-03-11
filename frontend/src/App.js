@@ -34,6 +34,7 @@ import SchemesSection from './components/SchemesSection';
 import FarmersSocial from './components/FarmersSocial';
 import WasteDashboard from './components/WasteDashboard';
 import CropRecommendation from './components/CropRecommendation';
+import SchedulePickup from './components/SchedulePickup';
 const App = () => {
   useEffect(() => {
     AOS.init();
@@ -57,6 +58,7 @@ const App = () => {
         <Route path="/farmarsocial" element={<FarmersSocial />} />
         <Route path="/waste-management" element={<WasteDashboard />} />
         <Route path="/crop-recommendation" element={<CropRecommendation />} />
+        <Route path="/schedule-pickup" element={<SchedulePickup />} />
         {/* <Route path="/contact" element={<ContactPage />} /> */}
         {/* <Route path="/worksection" element={<WorkSection />} /> */}
         {/* <Route path="/helpsection" element={<HelpSection />} /> */}
