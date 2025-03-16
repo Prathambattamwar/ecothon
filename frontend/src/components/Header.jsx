@@ -41,7 +41,7 @@ const Header = () => {
                   {/* <a className="nav-link p-0" href="/services">Services</a> */}
                 </li>
                 <li className="nav-item">
-                  {/* <a className="nav-link p-0" href="/wallet">Wallet</a> */}
+                  <a className="nav-link p-0" href="/wallet">Wallet</a>
                 </li>
               </ul>
 
