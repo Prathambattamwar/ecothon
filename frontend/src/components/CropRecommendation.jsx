@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './CropRecommendation.css';
+const API_URL = "https://your-backend-service.onrender.com";
+
 
 const CropRecommendation = () => {
     const [inputs, setInputs] = useState({
@@ -13,7 +15,7 @@ const CropRecommendation = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:5000/crops')
+        fetch('${API_URL}/crops')
             .then(res => {
                 if (!res.ok) throw new Error('Failed to fetch crops');
                 return res.json();
@@ -24,7 +26,7 @@ const CropRecommendation = () => {
 
     useEffect(() => {
         if (selectedCrop) {
-            fetch('http://localhost:5000/crop-conditions', {
+            fetch('${API_URL}/crop-conditions', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ crop: selectedCrop })
@@ -52,7 +54,7 @@ const CropRecommendation = () => {
         setRecommendation(null);
 
         try {
-            const response = await fetch('http://localhost:5000/predict', {
+            const response = await fetch('${API_URL}/predict', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(inputs)
