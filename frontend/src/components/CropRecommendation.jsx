@@ -15,7 +15,7 @@ const CropRecommendation = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch('${API_URL}/crops')
+        fetch(`${API_URL}/crops`)
             .then(res => {
                 if (!res.ok) throw new Error('Failed to fetch crops');
                 return res.json();
@@ -26,7 +26,7 @@ const CropRecommendation = () => {
 
     useEffect(() => {
         if (selectedCrop) {
-            fetch('${API_URL}/crop-conditions', {
+            fetch(`${API_URL}/crop-conditions`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ crop: selectedCrop })
@@ -54,7 +54,7 @@ const CropRecommendation = () => {
         setRecommendation(null);
 
         try {
-            const response = await fetch('${API_URL}/predict', {
+            const response = await fetch(`${API_URL}/predict`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(inputs)
