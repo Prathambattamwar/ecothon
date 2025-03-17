@@ -420,51 +420,53 @@ p {
 /* BANNER SECTION */
 
 /* SERVICE SECTION */
-.service-con {
-    background: #d6e0ea;
+
+.service-section {
+    background: #f8f9fa;
 }
 
-#service-slider .owl-item img {
-    width: auto;
-    margin: 0 auto;
-    filter: grayscale(100%);
+.service-card {
+    background: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.service-item h4 {
-    font-size: 22px;
-    line-height: 28px;
-    margin-top: auto;
+.service-card:hover {
+    transform: translateY(-5px);
 }
 
-.service-item {
-    padding: 46px 20px 26px;
-    border-radius: 30px 30px 0 0;
-    border: 3px solid transparent;
-    background: var(--white-color);
-}
-
-.service-item:hover {
-    border: 3px solid var(--accent);
-}
-
-#service-slider .service-item:hover figure img {
-    filter: none !important;
-}
-
-.service-item figure {
-    height: 70px;
-    margin-bottom: 26px;
-}
-
-.service-con .owl-stage-outer::after,
-.service-con .owl-stage-outer::before {
-    top: 0;
-    left: 0;
-    z-index: 1;
-    content: "";
-    height: 100%;
+.slider-controls {
     position: absolute;
-    box-shadow: 0px 0px 100px 90px #d6e0ea;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.slider-btn {
+    background: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    pointer-events: auto;
+    transition: all 0.3s ease;
+}
+
+.slider-btn:hover {
+    background: #198754;
+    color: white;
+    transform: scale(1.1);
+}
+
+.subtitle {
+    color: #6c757d;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
 .plant-img .container:after {
@@ -4782,4 +4784,78 @@ button {
 
 .transaction-item {
     animation: fadeIn 0.3s ease-out;
+}
+
+/* Add these media queries at the end of your CSS */
+
+@media (max-width: 480px) {
+    .wallet-container {
+        padding: 1rem;
+        margin: 1rem;
+        width: calc(100% - 2rem);
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .balance-grid {
+        gap: 1rem;
+    }
+
+    .action-buttons {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .action-btn {
+        flex: 1 1 45%;
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .transaction-item {
+        padding: 1rem;
+        margin: 0.25rem 0;
+    }
+
+    .tx-details {
+        max-width: 65%;
+    }
+
+    .tx-amount {
+        font-size: 0.9rem;
+    }
+
+    .farming-features {
+        grid-template-columns: 1fr;
+    }
+
+    /* Prevent horizontal overflow */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Ensure all elements stay within viewport */
+    * {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .wallet-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .balance-value {
+        font-size: 1.8rem;
+    }
+
+    .transaction-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .tx-details {
+        max-width: 100%;
+    }
 }

@@ -8,9 +8,17 @@ const FooterSection = () => {
         <div className="footer-inner-con flex-wrap">
           <div className="site-map footer-content">
             <div className="footre-logo">
-              <a href="/">
-                <figure>
-                  <img src={footerLogo} alt="footer-logo" />
+              <a href="/" className="footer-logo-link">
+                <figure className="footer-logo-wrapper">
+                  <img
+                    src={footerLogo}
+                    alt="footer-logo"
+                    style={{
+                      width: '206px',
+                      height: '49px',
+                      objectFit: 'contain'
+                    }}
+                  />
                 </figure>
               </a>
             </div>

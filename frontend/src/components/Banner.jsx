@@ -7,7 +7,7 @@ import homeBannarImg1 from '../assets/images/home-bannar-img1.jpg';
 import homeBannarImg2 from '../assets/images/home-bannar-img2.jpg';
 import homeBannarImg3 from '../assets/images/home-bannar-img3.jpg';
 
-function Banner ()  {
+function Banner() {
   React.useEffect(() => {
     AOS.init({ duration: 600 });
   }, []);
@@ -26,13 +26,13 @@ function Banner ()  {
           </div>
           <div className="banner-title text-center position-relative">
             <span className="special-txt d-block" data-aos="fade-up">
-              Welcome to Farmconnect
+              Welcome to Farmers Buddy
             </span>
             <h1 data-aos="fade-up">
               High Quality & Awesome
               <span className="position-relative text-border"> Agriculture</span> Services
             </h1>
-            <p data-aos="fade-up">We Sell Indoor & Outdoor Plants, Pots, Garden Supplies</p>
+
             <div className="banner-btn d-flex justify-content-center" data-aos="fade-up">
               <div className="generic-btn white-btn position-relative">
                 <Link to="/about">Get Started</Link>

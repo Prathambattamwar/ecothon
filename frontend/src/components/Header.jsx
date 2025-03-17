@@ -14,7 +14,15 @@ const Header = () => {
         <div className="wrapper">
           <nav className="navbar navbar-expand-lg navbar-light p-0">
             <a className="navbar-brand" href="index.html">
-              <img src={logoIcon} alt="logo-icon" />
+              <img
+                src={logoIcon}
+                alt="logo-icon"
+                style={{
+                  width: '135px',
+                  height: '49px',
+                  objectFit: 'contain' // preserves aspect ratio
+                }}
+              />
             </a>
             <button
               className="navbar-toggler collapsed"
@@ -38,7 +46,7 @@ const Header = () => {
                   <a className="nav-link p-0" href="/">About</a>
                 </li>
                 <li className="nav-item">
-                  {/* <a className="nav-link p-0" href="/services">Services</a> */}
+                  <a className="nav-link p-0" href="/services">Services</a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link p-0" href="/wallet">Wallet</a>

@@ -78,44 +78,6 @@ const Home = () => {
       <NewsSection />
       <FarmersSocial />
       <ProductSection />
-      <section className="w-100 float-left service-con position-relative plant-img">
-        <div className="container position-relative">
-          <div className="padding-top padding-bottom">
-            <div className="generic-title text-center ml-auto mr-auto" data-aos="fade-up">
-              <span>Services of UrbanLawns</span>
-              <h2>Explore Our Best Offer For Gardening</h2>
-            </div>
-            <div className="position-relative">
-              <Slider ref={sliderRef} {...settings} className="text-center">
-                {services.map((service, index) => (
-                  <div className="item" key={index}>
-                    <div className="service-item">
-                      <figure>
-                        <img src={service.img} alt="service-icon" />
-                      </figure>
-                      <h4>{service.title}</h4>
-                    </div>
-                  </div>
-                ))}
-              </Slider>
-              <div className="btn-wrap">
-                <button
-                  className="prev-btn clip-each border-style-thin"
-                  onClick={goToPrev}
-                >
-                  <i className="fas fa-arrow-left"></i>
-                </button>
-                <button
-                  className="next-btn clip-each border-style-thin"
-                  onClick={goToNext}
-                >
-                  <i className="fas fa-arrow-right"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
 
