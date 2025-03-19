@@ -35,7 +35,7 @@ function Banner() {
 
             <div className="banner-btn d-flex justify-content-center" data-aos="fade-up">
               <div className="generic-btn white-btn position-relative">
-                <Link to="/about">Get Started</Link>
+                <Link to="/home">Get Started</Link>
               </div>
               <div className="generic-btn white-btn position-relative">
                 <Link to="/services">Read More</Link>
