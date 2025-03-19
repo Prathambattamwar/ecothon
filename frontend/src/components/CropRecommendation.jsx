@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './CropRecommendation.css';
-const API_URL = "https://ecothon.onrender.com/";
+const API_URL = "https://ecothon.onrender.com";
 
 
 const CropRecommendation = () => {
