@@ -18,10 +18,10 @@ function Banner() {
         <div className="banner-inner-con">
           <div className="banner-img-box1">
             <figure className="position-relative box-shadow" data-aos="fade-up">
-              <img src={homeBannarImg1} alt="home-bannar-img" />
+              <img loading="lazy" src={homeBannarImg1} alt="home-bannar-img" />
             </figure>
             <figure className="mb-0 float-right position-relative box-shadow" data-aos="fade-up">
-              <img src={homeBannarImg2} alt="home-bannar-img" />
+              <img loading="lazy" src={homeBannarImg2} alt="home-bannar-img" />
             </figure>
           </div>
           <div className="banner-title text-center position-relative">
@@ -44,7 +44,7 @@ function Banner() {
           </div>
           <div className="banner-img-box2" data-aos="fade-up">
             <figure className="mb-0 position-relative box-shadow">
-              <img src={homeBannarImg3} alt="home-bannar-img" />
+              <img loading="lazy" src={homeBannarImg3} alt="home-bannar-img" />
             </figure>
           </div>
         </div>
